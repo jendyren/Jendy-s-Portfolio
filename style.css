@@ -3,15 +3,31 @@ html{
   background-image: url('https://cdn.discordapp.com/attachments/504452833035157504/730589221810601984/Personal_Website_BG_2.png');
 }
 body{
-  margin:0px;
-  margin-top: 4%;
+  width: 100%;
+  margin: 0px;
+  margin-top: 3%;
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
 }
 
-/* Navbar */
+#roundcard {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  border-radius: 25px;
+  background: white;
+  border: 1px solid #5680e9;
+  padding: 1%; 
+  width: 91%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
 
+#roundcard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Navbar */
 .topnav {
   overflow: hidden;
 }
@@ -19,38 +35,61 @@ body{
 .topnav a {
   float: right;
   display: block;
-  color: #595050;
+  color: #5680e9;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 15px;
+  margin-top: 1%;
   margin-right: 2%;
+  
 }
 
 .topnav a:hover {
-  color: #bddafb;
+  color: #595050;
+  border-bottom: 3px solid #5680e9;
 }
 
 .topnav a.active {
-  color: #2e2828;
-  font-size: 17px;
-  margin-left: 2%;
+  margin: 0%;
   float: left;
+  border-bottom: 0px;
 }
 
 .topnav .icon {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+
+@media only screen and (max-width: 650px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
-    float: right;
     display: block;
+  }
+
+  .circular--square{
+    max-width: 100%; 
+  }
+  .grid-container{
+    background-color: pink; 
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "image", "text"; 
+  }
+  .header-image, .header-text{
+    width: 100%; 
+    height: 50%;
+  }
+  .header-image{
+    grid-area: image; 
+    grid-row-start: 1; grid-row-end: 1;  
+  }
+  .header-text{
+    grid-area: text; grid-row-start: 2; grid-row-end: 2; 
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 651px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -62,33 +101,68 @@ body{
     display: block;
     text-align: left;
   }
+
+  .grid-container {
+    display: grid;
+    width: 99%;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: orange; 
+  }
+
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 30px;
+  }
+
 }
 
 
-#roundcard {
-  margin-left: 3%;
-  margin-right: 3%;
-  margin-bottom: 3%;
-  border-radius: 25px;
-  background: white;
-  border: 1px solid #bddafb;;
-  padding: 20px; 
-  width: 91%;
-}
 
 /* About Section */
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 30px;
+}
+
+/*
+h1{
+  color: #413b3b;
+}
 .aboutsection{
 }
 
 .about-grid-container {
   display: grid;
-  grid-template-columns: 30% 70%;
-  padding: 10px;
+  grid-template-columns: 44% 56%;
+  padding: 5px;
+  margin-right: 8%;
+  margin-left: 8%;
 }
-.about-grid-item {
-  padding: 20px;
-  font-size: 18px;
+.about-grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+}
+
+.about-img{
+  padding: 10px;
   text-align: center;
+}
+.about-text{
+  padding: 10px;
+  font-size: 18px;
+  text-align: left;
 }
 
 .selfbio{
@@ -97,11 +171,23 @@ body{
   margin-left: 5%;
 }
 
+.about-text p{
+  margin:0px;
+}
+
+.about-text h1{
+  margin:0px;
+}
+
 .avatar{
 
 }
+ */
+
 .circular--square {
   border-radius: 50%;
+
+  box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.3);
 }
 
 
